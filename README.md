@@ -8,4 +8,4 @@ Application will display the lowest price for the book. It stores historical pri
 ![Ekran görüntüsü 2023-07-28 051340](https://github.com/UygarDeniz/BookPriceTracker/assets/83472944/677293e8-c386-4abb-9fbc-c5004df086e6)
 
 - IMPORTANT
-- ONLY TO BE USED FOR EDUCATIONAL / DEMONSTRATIONAL PURPOSES
+- THE DATA ONLY HAS BEEN USED FOR EDUCATIONAL / DEMONSTRATION PURPOSES
