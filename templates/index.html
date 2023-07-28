@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Price</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background: #F7FBFC;
+        }
+        h1 {
+        margin-bottom: 70px;
+        font-family: "Century Gothic", Century Gothic, sans-serif;
+        }
+
+        form {
+            background-color: #B9D7EA;
+            width: 300px;
+            height: 44px;
+            border-radius: 20px;
+            display: flex;
+        }
+
+        #input-text {
+            all: unset;
+            font: 16px system-ui;
+            color: #fff;
+            padding: 2px 10px;
+        }
+
+        #input-btn {
+            all: unset;
+            font: 16px system-ui;
+            text-align: center;
+            color: #fff;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    {% if not_found %}
+        <h1>Book not found. Please try a different book</h1>
+    {% else %}
+        <h1>Welcome to Book Price Tracker</h1>
+    {% endif %}
+
+    <form method="post">
+      <input id="input-text" type="text" placeholder="Search..." name="book_title">
+      <input id="input-btn" type="submit" value="Search">
+    </form>
+</body>
+</html>

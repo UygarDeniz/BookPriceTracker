@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kitap Bilgileri</title>
+  <link rel="stylesheet" href="static/styles.css">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+<body>
+  <div class="container">
+    <form  method="post">
+      <input id="input-text" type="text" name="book_title">
+      <input id="input-btn" type="submit" value="Search">
+    </form>
+
+  </div>
+
+
+  {% for book_info in all_results %}
+  <div class="container">
+    <img class="logo" src="static/logos/{{ book_info['website'] }}_logo.png" alt="{{book_info['website']}}" width="200"
+         height="100">
+    <div class="book-info">
+      <div class="book-title">{{ book_info["book_name"] }}</div>
+      <div class="book-author">{{ book_info["author"] }}</div>
+      <div class="book-publisher">{{ book_info["publisher"] }}</div>
+    </div>
+    <div class="book-price"> {{ book_info["price"] }} TL</div>
+    <div class="book-url">
+      <a href="{{ book_info['book_url'] }}">
+        <button id="btn" type="button">Web Site</button></a>
+    </div>
+  </div>
+{% endfor %}
+
+
+  <div class="container">
+    <img src="static/charts/{{ all_results[0]['book_name']}}.png" alt="Graph"  width="600" height="400">
+  </div>
+
+
+
+
+</body>
+</html>
